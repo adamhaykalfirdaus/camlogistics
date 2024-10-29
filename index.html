@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Kapasitas</title>
+</head>
+<body>
+    <h1>Informasi Kapasitas</h1>
+    <p>Unit: <span id="unit"></span></p>
+    <p>Nomor Polisi: <span id="nomor_polisi"></span></p>
+    <p>Kapasitas: <span id="kapasitas"></span> ton/CBM</p>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('unit').textContent = urlParams.get('unit');
+        document.getElementById('nomor_polisi').textContent = urlParams.get('nomor_polisi');
+        document.getElementById('kapasitas').textContent = urlParams.get('kapasitas');
+    </script>
+</body>
+</html>
